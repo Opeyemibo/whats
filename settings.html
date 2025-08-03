@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Settings - ChatBot Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sections.css">
+    <script type="text/javascript" src="mode.js" defer></script>
+</head>
+<body>
+    
+<div class="container">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>CHAT BoT</h2>
+    <span class="span"></span>
+        <ul class="menu">
+            <li>
+                <img src="chat.svg" alt="">
+                <a href="index.html"><span>Chat Generator</span></a>
+            </li>
+            <li>
+                <img src="feedback.svg" alt="">
+                <a href="feedback.html"><span>Feedback</span></a>
+            </li>
+            <li>
+                <img src="library.svg" alt="">
+                <a href="prompt-library.html"><span>Prompt Library</span></a>
+            </li>
+             <li>
+                <img src="mysaves.svg" alt="">
+                <a href="my-saves.html"><span>My Saves</span></a>
+            </li>
+             <li>
+                <img src="favourites.svg" alt="">
+                <a href="favorite.html"><span>Favorite</span></a>
+            </li>
+            <li>
+                <img src="history.svg" alt="">
+                <a href="history.html"><span>History</span></a>
+            </li>
+            <li>
+                <img src="statistics.svg" alt="">
+                <a href="statistics.html"><span>Statistics</span></a>
+            </li>
+            <span class="span"></span>
+            <li class="active">
+                <img src="settings.svg" alt="">
+                <a href="settings.html"><span>Settings</span></a>
+            </li>
+            <li>
+                <img src="logout.svg" alt="">
+                <a href="logout.html"><span>Log Out</span></a>
+            </li>
+        </ul>
+    <div class="user-profile">
+      <p><strong>Adam Williams</strong></p>
+      <button class="upgrade-btn">Upgrade to Pro</button>
+    </div>
+  </div>
+
+  <!-- Settings Section -->
+  <div class="section-main settings-section">
+    <div class="section-header">
+      <h1>⚙️ Settings</h1>
+      <p>Customize your ChatBot experience</p>
+    </div>
+    
+    <div class="settings-container">
+      <div class="settings-nav">
+        <button class="settings-tab active" data-tab="general">General</button>
+        <button class="settings-tab" data-tab="appearance">Appearance</button>
+        <button class="settings-tab" data-tab="privacy">Privacy</button>
+        <button class="settings-tab" data-tab="notifications">Notifications</button>
+        <button class="settings-tab" data-tab="account">Account</button>
+      </div>
+      
+      <div class="settings-content">
+        <!-- General Settings -->
+        <div class="settings-panel active" id="general">
+          <h3>General Settings</h3>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Language</span>
+              <select class="setting-select">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="zh">Chinese</option>
+              </select>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Default AI Model</span>
+              <select class="setting-select">
+                <option value="gpt4">GPT-4 (Recommended)</option>
+                <option value="gpt3">GPT-3.5 Turbo</option>
+                <option value="claude">Claude</option>
+                <option value="gemini">Gemini Pro</option>
+              </select>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Response Length</span>
+              <select class="setting-select">
+                <option value="short">Short</option>
+                <option value="medium" selected>Medium</option>
+                <option value="long">Long</option>
+                <option value="detailed">Very Detailed</option>
+              </select>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Auto-save conversations</span>
+              <input type="checkbox" checked>
+              <div class="toggle-slider"></div>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Enable typing indicators</span>
+              <input type="checkbox" checked>
+              <div class="toggle-slider"></div>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Show timestamps</span>
+              <input type="checkbox">
+              <div class="toggle-slider"></div>
+            </label>
+          </div>
+        </div>
+        
+        <!-- Appearance Settings -->
+        <div class="settings-panel" id="appearance">
+          <h3>Appearance Settings</h3>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Theme</span>
+              <select class="setting-select" id="themeSelect">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="auto">Auto (System)</option>
+              </select>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Font Size</span>
+              <select class="setting-select">
+                <option value="small">Small</option>
+                <option value="medium" selected>Medium</option>
+                <option value="large">Large</option>
+                <option value="xl">Extra Large</option>
+              </select>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Chat Bubble Style</span>
+              <select class="setting-select">
+                <option value="rounded" selected>Rounded</option>
+                <option value="square">Square</option>
+                <option value="minimal">Minimal</option>
+              </select>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Compact mode</span>
+              <input type="checkbox">
+              <div class="toggle-slider"></div>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Show animations</span>
+              <input type="checkbox" checked>
+              <div class="toggle-slider"></div>
+            </label>
+          </div>
+        </div>
+        
+        <!-- Privacy Settings -->
+        <div class="settings-panel" id="privacy">
+          <h3>Privacy Settings</h3>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Save conversation history</span>
+              <input type="checkbox" checked>
+              <div class="toggle-slider"></div>
+            </label>
+            <p class="setting-description">When disabled, conversations won't be saved locally</p>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Analytics and usage data</span>
+              <input type="checkbox" checked>
+              <div class="toggle-slider"></div>
+            </label>
+            <p class="setting-description">Help improve the service by sharing anonymous usage data</p>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Personalized recommendations</span>
+              <input type="checkbox" checked>
+              <div class="toggle-slider"></div>
+            </label>
+            <p class="setting-description">Use your chat history to provide better suggestions</p>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Data retention period</span>
+              <select class="setting-select">
+                <option value="30">30 days</option>
+                <option value="90" selected>90 days</option>
+                <option value="365">1 year</option>
+                <option value="forever">Forever</option>
+              </select>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <button class="danger-btn">Clear All Data</button>
+            <p class="setting-description">Permanently delete all your conversations and data</p>
+          </div>
+        </div>
+        
+        <!-- Notifications Settings -->
+        <div class="settings-panel" id="notifications">
+          <h3>Notification Settings</h3>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Browser notifications</span>
+              <input type="checkbox" id="browserNotifications">
+              <div class="toggle-slider"></div>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Sound notifications</span>
+              <input type="checkbox" checked>
+              <div class="toggle-slider"></div>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>New feature announcements</span>
+              <input type="checkbox" checked>
+              <div class="toggle-slider"></div>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-toggle">
+              <span>Weekly usage summary</span>
+              <input type="checkbox">
+              <div class="toggle-slider"></div>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Notification sound</span>
+              <select class="setting-select">
+                <option value="default">Default</option>
+                <option value="chime">Chime</option>
+                <option value="bell">Bell</option>
+                <option value="pop">Pop</option>
+                <option value="none">None</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        
+        <!-- Account Settings -->
+        <div class="settings-panel" id="account">
+          <h3>Account Settings</h3>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Display Name</span>
+              <input type="text" class="setting-input" value="Adam Williams">
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Email</span>
+              <input type="email" class="setting-input" value="adam.williams@example.com">
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <span>Time Zone</span>
+              <select class="setting-select">
+                <option value="UTC-8">Pacific Time (UTC-8)</option>
+                <option value="UTC-5" selected>Eastern Time (UTC-5)</option>
+                <option value="UTC+0">Greenwich Mean Time (UTC+0)</option>
+                <option value="UTC+1">Central European Time (UTC+1)</option>
+                <option value="UTC+8">China Standard Time (UTC+8)</option>
+              </select>
+            </label>
+          </div>
+          
+          <div class="setting-group">
+            <button class="primary-btn">Change Password</button>
+          </div>
+          
+          <div class="setting-group">
+            <button class="secondary-btn">Download My Data</button>
+            <p class="setting-description">Download all your conversations and data</p>
+          </div>
+          
+          <div class="setting-group">
+            <button class="danger-btn">Delete Account</button>
+            <p class="setting-description">Permanently delete your account and all associated data</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="settings-footer">
+      <button class="save-btn">Save Changes</button>
+      <button class="reset-btn">Reset to Defaults</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const settingsTabs = document.querySelectorAll('.settings-tab');
+    const settingsPanels = document.querySelectorAll('.settings-panel');
+    const toggles = document.querySelectorAll('.setting-toggle input[type="checkbox"]');
+    const saveBtn = document.querySelector('.save-btn');
+    const resetBtn = document.querySelector('.reset-btn');
+    
+    // Tab switching
+    settingsTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetPanel = this.dataset.tab;
+            
+            // Update active tab
+            settingsTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Update active panel
+            settingsPanels.forEach(panel => {
+                panel.classList.remove('active');
+                if (panel.id === targetPanel) {
+                    panel.classList.add('active');
+                }
+            });
+        });
+    });
+    
+    // Toggle switches
+    toggles.forEach(toggle => {
+        toggle.addEventListener('change', function() {
+            // Add visual feedback
+            const slider = this.nextElementSibling;
+            if (this.checked) {
+                slider.style.background = '#10b981';
+            } else {
+                slider.style.background = '#ccc';
+            }
+        });
+    });
+    
+    // Browser notifications permission
+    const browserNotifications = document.getElementById('browserNotifications');
+    if (browserNotifications) {
+        browserNotifications.addEventListener('change', function() {
+            if (this.checked) {
+                if ('Notification' in window) {
+                    Notification.requestPermission().then(permission => {
+                        if (permission !== 'granted') {
+                            this.checked = false;
+                            alert('Please enable notifications in your browser settings.');
+                        }
+                    });
+                } else {
+                    this.checked = false;
+                    alert('Your browser does not support notifications.');
+                }
+            }
+        });
+    }
+    
+    // Theme selector
+    const themeSelect = document.getElementById('themeSelect');
+    if (themeSelect) {
+        themeSelect.addEventListener('change', function() {
+            const theme = this.value;
+            document.body.className = theme === 'dark' ? 'dark-theme' : '';
+            localStorage.setItem('theme', theme);
+        });
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            themeSelect.value = savedTheme;
+            document.body.className = savedTheme === 'dark' ? 'dark-theme' : '';
+        }
+    }
+    
+    // Save settings
+    saveBtn.addEventListener('click', function() {
+        const originalText = this.textContent;
+        this.textContent = 'Saving...';
+        this.disabled = true;
+        
+        // Simulate saving
+        setTimeout(() => {
+            this.textContent = 'Saved!';
+            setTimeout(() => {
+                this.textContent = originalText;
+                this.disabled = false;
+            }, 2000);
+        }, 1000);
+        
+        // Save all settings to localStorage
+        const settings = {};
+        document.querySelectorAll('.setting-select, .setting-input').forEach(input => {
+            settings[input.name || input.id] = input.value;
+        });
+        
+        toggles.forEach(toggle => {
+            settings[toggle.name || toggle.id] = toggle.checked;
+        });
+        
+        localStorage.setItem('chatbotSettings', JSON.stringify(settings));
+    });
+    
+    // Reset settings
+    resetBtn.addEventListener('click', function() {
+        if (confirm('Are you sure you want to reset all settings to defaults?')) {
+            // Reset all form elements
+            document.querySelectorAll('.setting-select').forEach(select => {
+                select.selectedIndex = 0;
+            });
+            
+            document.querySelectorAll('.setting-input').forEach(input => {
+                input.value = input.defaultValue;
+            });
+            
+            toggles.forEach(toggle => {
+                toggle.checked = toggle.defaultChecked;
+            });
+            
+            // Clear saved settings
+            localStorage.removeItem('chatbotSettings');
+            localStorage.removeItem('theme');
+            document.body.className = '';
+            
+            alert('Settings reset to defaults.');
+        }
+    });
+    
+    // Danger buttons
+    document.querySelectorAll('.danger-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const action = this.textContent.toLowerCase();
+            const confirmMessage = action.includes('delete account') 
+                ? 'Are you sure you want to delete your account? This action cannot be undone.'
+                : 'Are you sure you want to clear all data? This action cannot be undone.';
+            
+            if (confirm(confirmMessage)) {
+                if (action.includes('delete account')) {
+                    alert('Account deletion requested. You will receive a confirmation email.');
+                } else {
+                    alert('All data has been cleared.');
+                }
+            }
+        });
+    });
+    
+    // Load saved settings on page load
+    const savedSettings = localStorage.getItem('chatbotSettings');
+    if (savedSettings) {
+        const settings = JSON.parse(savedSettings);
+        
+        Object.keys(settings).forEach(key => {
+            const element = document.querySelector(`[name="${key}"], #${key}`);
+            if (element) {
+                if (element.type === 'checkbox') {
+                    element.checked = settings[key];
+                } else {
+                    element.value = settings[key];
+                }
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>

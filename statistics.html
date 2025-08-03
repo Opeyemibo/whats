@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Statistics - ChatBot Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sections.css">
+    <script type="text/javascript" src="mode.js" defer></script>
+</head>
+<body>
+    
+<div class="container">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>CHAT BoT</h2>
+    <span class="span"></span>
+        <ul class="menu">
+            <li>
+                <img src="chat.svg" alt="">
+                <a href="index.html"><span>Chat Generator</span></a>
+            </li>
+            <li>
+                <img src="feedback.svg" alt="">
+                <a href="feedback.html"><span>Feedback</span></a>
+            </li>
+            <li>
+                <img src="library.svg" alt="">
+                <a href="prompt-library.html"><span>Prompt Library</span></a>
+            </li>
+             <li>
+                <img src="mysaves.svg" alt="">
+                <a href="my-saves.html"><span>My Saves</span></a>
+            </li>
+             <li>
+                <img src="favourites.svg" alt="">
+                <a href="favorite.html"><span>Favorite</span></a>
+            </li>
+            <li>
+                <img src="history.svg" alt="">
+                <a href="history.html"><span>History</span></a>
+            </li>
+            <li class="active">
+                <img src="statistics.svg" alt="">
+                <a href="statistics.html"><span>Statistics</span></a>
+            </li>
+            <span class="span"></span>
+            <li>
+                <img src="settings.svg" alt="">
+                <a href="settings.html"><span>Settings</span></a>
+            </li>
+            <li>
+                <img src="logout.svg" alt="">
+                <a href="logout.html"><span>Log Out</span></a>
+            </li>
+        </ul>
+    <div class="user-profile">
+      <p><strong>Adam Williams</strong></p>
+      <button class="upgrade-btn">Upgrade to Pro</button>
+    </div>
+  </div>
+
+  <!-- Statistics Section -->
+  <div class="section-main statistics-section">
+    <div class="section-header">
+      <h1>📊 Statistics</h1>
+      <p>Your usage analytics and insights</p>
+    </div>
+    
+    <div class="stats-period">
+      <div class="period-selector">
+        <button class="period-btn active" data-period="week">This Week</button>
+        <button class="period-btn" data-period="month">This Month</button>
+        <button class="period-btn" data-period="year">This Year</button>
+        <button class="period-btn" data-period="all">All Time</button>
+      </div>
+    </div>
+    
+    <div class="stats-overview">
+      <div class="stat-card">
+        <div class="stat-icon">💬</div>
+        <div class="stat-info">
+          <h3>1,247</h3>
+          <p>Total Conversations</p>
+          <span class="stat-change positive">+12% from last week</span>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">⏱️</div>
+        <div class="stat-info">
+          <h3>42.5h</h3>
+          <p>Time Spent</p>
+          <span class="stat-change positive">+8% from last week</span>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">📝</div>
+        <div class="stat-info">
+          <h3>3,892</h3>
+          <p>Messages Sent</p>
+          <span class="stat-change positive">+15% from last week</span>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-info">
+          <h3>156</h3>
+          <p>Favorites</p>
+          <span class="stat-change positive">+5% from last week</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stats-charts">
+      <div class="chart-container">
+        <h3>Daily Activity</h3>
+        <div class="activity-chart">
+          <div class="chart-bar" style="height: 60%;" data-day="Mon" data-value="24"></div>
+          <div class="chart-bar" style="height: 80%;" data-day="Tue" data-value="32"></div>
+          <div class="chart-bar" style="height: 45%;" data-day="Wed" data-value="18"></div>
+          <div class="chart-bar" style="height: 90%;" data-day="Thu" data-value="36"></div>
+          <div class="chart-bar" style="height: 70%;" data-day="Fri" data-value="28"></div>
+          <div class="chart-bar" style="height: 35%;" data-day="Sat" data-value="14"></div>
+          <div class="chart-bar" style="height: 25%;" data-day="Sun" data-value="10"></div>
+        </div>
+        <div class="chart-labels">
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+          <span>Sun</span>
+        </div>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Popular Topics</h3>
+        <div class="topics-chart">
+          <div class="topic-item">
+            <span class="topic-name">Programming</span>
+            <div class="topic-bar">
+              <div class="topic-progress" style="width: 85%;"></div>
+            </div>
+            <span class="topic-percentage">85%</span>
+          </div>
+          <div class="topic-item">
+            <span class="topic-name">Creative Writing</span>
+            <div class="topic-bar">
+              <div class="topic-progress" style="width: 72%;"></div>
+            </div>
+            <span class="topic-percentage">72%</span>
+          </div>
+          <div class="topic-item">
+            <span class="topic-name">Business</span>
+            <div class="topic-bar">
+              <div class="topic-progress" style="width: 68%;"></div>
+            </div>
+            <span class="topic-percentage">68%</span>
+          </div>
+          <div class="topic-item">
+            <span class="topic-name">Education</span>
+            <div class="topic-bar">
+              <div class="topic-progress" style="width: 54%;"></div>
+            </div>
+            <span class="topic-percentage">54%</span>
+          </div>
+          <div class="topic-item">
+            <span class="topic-name">Cooking</span>
+            <div class="topic-bar">
+              <div class="topic-progress" style="width: 41%;"></div>
+            </div>
+            <span class="topic-percentage">41%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stats-details">
+      <div class="detail-section">
+        <h3>Usage Patterns</h3>
+        <div class="pattern-grid">
+          <div class="pattern-item">
+            <div class="pattern-icon">🌅</div>
+            <div class="pattern-info">
+              <h4>Most Active Time</h4>
+              <p>2:00 PM - 4:00 PM</p>
+            </div>
+          </div>
+          <div class="pattern-item">
+            <div class="pattern-icon">📅</div>
+            <div class="pattern-info">
+              <h4>Most Active Day</h4>
+              <p>Thursday</p>
+            </div>
+          </div>
+          <div class="pattern-item">
+            <div class="pattern-icon">⏰</div>
+            <div class="pattern-info">
+              <h4>Average Session</h4>
+              <p>34 minutes</p>
+            </div>
+          </div>
+          <div class="pattern-item">
+            <div class="pattern-icon">🔥</div>
+            <div class="pattern-info">
+              <h4>Longest Streak</h4>
+              <p>12 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="detail-section">
+        <h3>Achievements</h3>
+        <div class="achievements-grid">
+          <div class="achievement-item earned">
+            <div class="achievement-icon">🏆</div>
+            <div class="achievement-info">
+              <h4>Conversation Master</h4>
+              <p>Complete 1000 conversations</p>
+            </div>
+          </div>
+          <div class="achievement-item earned">
+            <div class="achievement-icon">⭐</div>
+            <div class="achievement-info">
+              <h4>Super Saver</h4>
+              <p>Save 100 conversations</p>
+            </div>
+          </div>
+          <div class="achievement-item earned">
+            <div class="achievement-icon">🔥</div>
+            <div class="achievement-info">
+              <h4>Week Warrior</h4>
+              <p>Chat for 7 consecutive days</p>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="achievement-icon">💎</div>
+            <div class="achievement-info">
+              <h4>Diamond User</h4>
+              <p>Reach 10,000 messages</p>
+              <div class="progress-bar">
+                <div class="progress" style="width: 38.9%;"></div>
+              </div>
+              <span class="progress-text">3,892 / 10,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="export-section">
+      <h3>Export Data</h3>
+      <div class="export-options">
+        <button class="export-btn">📊 Export Statistics</button>
+        <button class="export-btn">💾 Export Conversations</button>
+        <button class="export-btn">📈 Generate Report</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const periodButtons = document.querySelectorAll('.period-btn');
+    const chartBars = document.querySelectorAll('.chart-bar');
+    
+    // Period selector functionality
+    periodButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            periodButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Update statistics based on selected period
+            updateStatistics(this.dataset.period);
+        });
+    });
+    
+    // Chart bar hover effects
+    chartBars.forEach(bar => {
+        bar.addEventListener('mouseenter', function() {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'chart-tooltip';
+            tooltip.textContent = `${this.dataset.day}: ${this.dataset.value} conversations`;
+            tooltip.style.position = 'absolute';
+            tooltip.style.background = '#333';
+            tooltip.style.color = 'white';
+            tooltip.style.padding = '5px 10px';
+            tooltip.style.borderRadius = '4px';
+            tooltip.style.fontSize = '12px';
+            tooltip.style.pointerEvents = 'none';
+            tooltip.style.zIndex = '1000';
+            
+            document.body.appendChild(tooltip);
+            
+            const rect = this.getBoundingClientRect();
+            tooltip.style.left = rect.left + rect.width / 2 - tooltip.offsetWidth / 2 + 'px';
+            tooltip.style.top = rect.top - tooltip.offsetHeight - 5 + 'px';
+            
+            this.tooltip = tooltip;
+        });
+        
+        bar.addEventListener('mouseleave', function() {
+            if (this.tooltip) {
+                document.body.removeChild(this.tooltip);
+                this.tooltip = null;
+            }
+        });
+    });
+    
+    // Export functionality
+    document.querySelectorAll('.export-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const originalText = this.textContent;
+            this.textContent = 'Preparing...';
+            this.disabled = true;
+            
+            setTimeout(() => {
+                this.textContent = 'Downloaded!';
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.disabled = false;
+                }, 2000);
+            }, 1500);
+        });
+    });
+    
+    function updateStatistics(period) {
+        // Simulate updating statistics based on period
+        const statCards = document.querySelectorAll('.stat-card h3');
+        const changes = document.querySelectorAll('.stat-change');
+        
+        // Sample data for different periods
+        const data = {
+            week: {
+                conversations: '1,247',
+                time: '42.5h',
+                messages: '3,892',
+                favorites: '156'
+            },
+            month: {
+                conversations: '4,823',
+                time: '156.2h',
+                messages: '14,567',
+                favorites: '423'
+            },
+            year: {
+                conversations: '52,341',
+                time: '1,847h',
+                messages: '187,234',
+                favorites: '2,156'
+            },
+            all: {
+                conversations: '78,912',
+                time: '2,934h',
+                messages: '298,456',
+                favorites: '3,789'
+            }
+        };
+        
+        const periodData = data[period];
+        if (periodData) {
+            statCards[0].textContent = periodData.conversations;
+            statCards[1].textContent = periodData.time;
+            statCards[2].textContent = periodData.messages;
+            statCards[3].textContent = periodData.favorites;
+        }
+        
+        // Animate the update
+        statCards.forEach(card => {
+            card.style.animation = 'pulse 0.5s ease';
+        });
+        
+        setTimeout(() => {
+            statCards.forEach(card => {
+                card.style.animation = '';
+            });
+        }, 500);
+    }
+    
+    // Achievement click effects
+    document.querySelectorAll('.achievement-item').forEach(item => {
+        item.addEventListener('click', function() {
+            if (this.classList.contains('earned')) {
+                this.style.animation = 'bounce 0.5s ease';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 500);
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

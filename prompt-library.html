@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Prompt Library - ChatBot Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sections.css">
+    <script type="text/javascript" src="mode.js" defer></script>
+</head>
+<body>
+    
+<div class="container">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>CHAT BoT</h2>
+    <span class="span"></span>
+        <ul class="menu">
+            <li>
+                <img src="chat.svg" alt="">
+                <a href="index.html"><span>Chat Generator</span></a>
+            </li>
+            <li>
+                <img src="feedback.svg" alt="">
+                <a href="feedback.html"><span>Feedback</span></a>
+            </li>
+            <li class="active">
+                <img src="library.svg" alt="">
+                <a href="prompt-library.html"><span>Prompt Library</span></a>
+            </li>
+             <li>
+                <img src="mysaves.svg" alt="">
+                <a href="my-saves.html"><span>My Saves</span></a>
+            </li>
+             <li>
+                <img src="favourites.svg" alt="">
+                <a href="favorite.html"><span>Favorite</span></a>
+            </li>
+            <li>
+                <img src="history.svg" alt="">
+                <a href="history.html"><span>History</span></a>
+            </li>
+            <li>
+                <img src="statistics.svg" alt="">
+                <a href="statistics.html"><span>Statistics</span></a>
+            </li>
+            <span class="span"></span>
+            <li>
+                <img src="settings.svg" alt="">
+                <a href="settings.html"><span>Settings</span></a>
+            </li>
+            <li>
+                <img src="logout.svg" alt="">
+                <a href="logout.html"><span>Log Out</span></a>
+            </li>
+        </ul>
+    <div class="user-profile">
+      <p><strong>Adam Williams</strong></p>
+      <button class="upgrade-btn">Upgrade to Pro</button>
+    </div>
+  </div>
+
+  <!-- Prompt Library Section -->
+  <div class="section-main library-section">
+    <div class="section-header">
+      <h1>📚 Prompt Library</h1>
+      <p>Discover and use pre-made prompts</p>
+    </div>
+    
+    <div class="library-controls">
+      <div class="search-bar">
+        <input type="text" id="promptSearch" placeholder="Search prompts...">
+        <button class="search-btn">🔍</button>
+      </div>
+      <div class="category-filter">
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="writing">Writing</option>
+          <option value="coding">Coding</option>
+          <option value="business">Business</option>
+          <option value="creative">Creative</option>
+          <option value="education">Education</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="prompts-grid">
+      <div class="prompt-card" data-category="writing">
+        <div class="prompt-header">
+          <h3>✍️ Creative Writing</h3>
+          <button class="favorite-btn">♡</button>
+        </div>
+        <p class="prompt-text">Write a compelling short story about a character who discovers they can...</p>
+        <div class="prompt-actions">
+          <button class="use-btn">Use Prompt</button>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-meta">
+          <span class="category">Writing</span>
+          <span class="uses">Used 234 times</span>
+        </div>
+      </div>
+      
+      <div class="prompt-card" data-category="coding">
+        <div class="prompt-header">
+          <h3>💻 Code Review</h3>
+          <button class="favorite-btn">♡</button>
+        </div>
+        <p class="prompt-text">Please review this code and suggest improvements for performance and readability...</p>
+        <div class="prompt-actions">
+          <button class="use-btn">Use Prompt</button>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-meta">
+          <span class="category">Coding</span>
+          <span class="uses">Used 456 times</span>
+        </div>
+      </div>
+      
+      <div class="prompt-card" data-category="business">
+        <div class="prompt-header">
+          <h3>📊 Business Plan</h3>
+          <button class="favorite-btn">♡</button>
+        </div>
+        <p class="prompt-text">Help me create a comprehensive business plan for a startup that focuses on...</p>
+        <div class="prompt-actions">
+          <button class="use-btn">Use Prompt</button>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-meta">
+          <span class="category">Business</span>
+          <span class="uses">Used 189 times</span>
+        </div>
+      </div>
+      
+      <div class="prompt-card" data-category="creative">
+        <div class="prompt-header">
+          <h3>🎨 Art Description</h3>
+          <button class="favorite-btn">♡</button>
+        </div>
+        <p class="prompt-text">Describe a surreal artwork that combines elements of nature and technology...</p>
+        <div class="prompt-actions">
+          <button class="use-btn">Use Prompt</button>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-meta">
+          <span class="category">Creative</span>
+          <span class="uses">Used 312 times</span>
+        </div>
+      </div>
+      
+      <div class="prompt-card" data-category="education">
+        <div class="prompt-header">
+          <h3>🎓 Study Guide</h3>
+          <button class="favorite-btn">♡</button>
+        </div>
+        <p class="prompt-text">Create a comprehensive study guide for the topic of quantum physics...</p>
+        <div class="prompt-actions">
+          <button class="use-btn">Use Prompt</button>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-meta">
+          <span class="category">Education</span>
+          <span class="uses">Used 167 times</span>
+        </div>
+      </div>
+      
+      <div class="prompt-card" data-category="writing">
+        <div class="prompt-header">
+          <h3>📝 Email Template</h3>
+          <button class="favorite-btn">♡</button>
+        </div>
+        <p class="prompt-text">Write a professional email template for following up on a job application...</p>
+        <div class="prompt-actions">
+          <button class="use-btn">Use Prompt</button>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-meta">
+          <span class="category">Writing</span>
+          <span class="uses">Used 523 times</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('promptSearch');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const promptCards = document.querySelectorAll('.prompt-card');
+    
+    // Search functionality
+    searchInput.addEventListener('input', filterPrompts);
+    categoryFilter.addEventListener('change', filterPrompts);
+    
+    function filterPrompts() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedCategory = categoryFilter.value;
+        
+        promptCards.forEach(card => {
+            const cardText = card.textContent.toLowerCase();
+            const cardCategory = card.dataset.category;
+            
+            const matchesSearch = cardText.includes(searchTerm);
+            const matchesCategory = selectedCategory === 'all' || cardCategory === selectedCategory;
+            
+            if (matchesSearch && matchesCategory) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    
+    // Favorite functionality
+    document.querySelectorAll('.favorite-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (this.textContent === '♡') {
+                this.textContent = '♥';
+                this.style.color = '#e74c3c';
+            } else {
+                this.textContent = '♡';
+                this.style.color = '#666';
+            }
+        });
+    });
+    
+    // Copy functionality
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const promptText = this.closest('.prompt-card').querySelector('.prompt-text').textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                this.textContent = 'Copied!';
+                setTimeout(() => {
+                    this.textContent = 'Copy';
+                }, 2000);
+            });
+        });
+    });
+    
+    // Use prompt functionality
+    document.querySelectorAll('.use-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const promptText = this.closest('.prompt-card').querySelector('.prompt-text').textContent;
+            // Redirect to main chat with the prompt
+            localStorage.setItem('selectedPrompt', promptText);
+            window.location.href = 'index.html';
+        });
+    });
+});
+</script>
+
+</body>
+</html>

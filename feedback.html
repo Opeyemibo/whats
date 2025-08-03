@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Feedback - ChatBot Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sections.css">
+    <script type="text/javascript" src="mode.js" defer></script>
+</head>
+<body>
+    
+<div class="container">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>CHAT BoT</h2>
+    <span class="span"></span>
+        <ul class="menu">
+            <li>
+                <img src="chat.svg" alt="">
+                <a href="index.html"><span>Chat Generator</span></a>
+            </li>
+            <li class="active">
+                <img src="feedback.svg" alt="">
+                <a href="feedback.html"><span>Feedback</span></a>
+            </li>
+            <li>
+                <img src="library.svg" alt="">
+                <a href="prompt-library.html"><span>Prompt Library</span></a>
+            </li>
+             <li>
+                <img src="mysaves.svg" alt="">
+                <a href="my-saves.html"><span>My Saves</span></a>
+            </li>
+             <li>
+                <img src="favourites.svg" alt="">
+                <a href="favorite.html"><span>Favorite</span></a>
+            </li>
+            <li>
+                <img src="history.svg" alt="">
+                <a href="history.html"><span>History</span></a>
+            </li>
+            <li>
+                <img src="statistics.svg" alt="">
+                <a href="statistics.html"><span>Statistics</span></a>
+            </li>
+            <span class="span"></span>
+            <li>
+                <img src="settings.svg" alt="">
+                <a href="settings.html"><span>Settings</span></a>
+            </li>
+            <li>
+                <img src="logout.svg" alt="">
+                <a href="logout.html"><span>Log Out</span></a>
+            </li>
+        </ul>
+    <div class="user-profile">
+      <p><strong>Adam Williams</strong></p>
+      <button class="upgrade-btn">Upgrade to Pro</button>
+    </div>
+  </div>
+
+  <!-- Feedback Section -->
+  <div class="section-main feedback-section">
+    <div class="section-header">
+      <h1>📝 Feedback</h1>
+      <p>Help us improve your experience</p>
+    </div>
+    
+    <div class="feedback-container">
+      <div class="feedback-form">
+        <h3>Share Your Thoughts</h3>
+        
+        <div class="rating-section">
+          <label>How would you rate your experience?</label>
+          <div class="star-rating">
+            <span class="star" data-rating="1">⭐</span>
+            <span class="star" data-rating="2">⭐</span>
+            <span class="star" data-rating="3">⭐</span>
+            <span class="star" data-rating="4">⭐</span>
+            <span class="star" data-rating="5">⭐</span>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="feedbackType">Feedback Type</label>
+          <select id="feedbackType">
+            <option value="general">General Feedback</option>
+            <option value="bug">Bug Report</option>
+            <option value="feature">Feature Request</option>
+            <option value="improvement">Improvement Suggestion</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="feedbackMessage">Your Message</label>
+          <textarea id="feedbackMessage" placeholder="Tell us what you think..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="userEmail">Email (Optional)</label>
+          <input type="email" id="userEmail" placeholder="your.email@example.com">
+        </div>
+        
+        <button class="submit-btn">Submit Feedback</button>
+      </div>
+      
+      <div class="feedback-stats">
+        <h3>Recent Feedback</h3>
+        <div class="stat-item">
+          <span class="stat-number">4.8</span>
+          <span class="stat-label">Average Rating</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">1,247</span>
+          <span class="stat-label">Total Reviews</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Satisfaction Rate</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Star rating functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const stars = document.querySelectorAll('.star');
+    let selectedRating = 0;
+    
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            selectedRating = parseInt(this.dataset.rating);
+            updateStars();
+        });
+        
+        star.addEventListener('mouseover', function() {
+            const hoverRating = parseInt(this.dataset.rating);
+            highlightStars(hoverRating);
+        });
+    });
+    
+    document.querySelector('.star-rating').addEventListener('mouseleave', function() {
+        updateStars();
+    });
+    
+    function updateStars() {
+        stars.forEach((star, index) => {
+            if (index < selectedRating) {
+                star.style.color = '#ffd700';
+            } else {
+                star.style.color = '#ddd';
+            }
+        });
+    }
+    
+    function highlightStars(rating) {
+        stars.forEach((star, index) => {
+            if (index < rating) {
+                star.style.color = '#ffd700';
+            } else {
+                star.style.color = '#ddd';
+            }
+        });
+    }
+    
+    // Submit feedback
+    document.querySelector('.submit-btn').addEventListener('click', function() {
+        const feedbackType = document.getElementById('feedbackType').value;
+        const message = document.getElementById('feedbackMessage').value;
+        const email = document.getElementById('userEmail').value;
+        
+        if (!message.trim()) {
+            alert('Please enter your feedback message.');
+            return;
+        }
+        
+        // Simulate submission
+        this.textContent = 'Submitting...';
+        this.disabled = true;
+        
+        setTimeout(() => {
+            alert('Thank you for your feedback! We appreciate your input.');
+            document.getElementById('feedbackMessage').value = '';
+            document.getElementById('userEmail').value = '';
+            selectedRating = 0;
+            updateStars();
+            this.textContent = 'Submit Feedback';
+            this.disabled = false;
+        }, 1500);
+    });
+});
+</script>
+
+</body>
+</html>

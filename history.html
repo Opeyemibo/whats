@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>History - ChatBot Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sections.css">
+    <script type="text/javascript" src="mode.js" defer></script>
+</head>
+<body>
+    
+<div class="container">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>CHAT BoT</h2>
+    <span class="span"></span>
+        <ul class="menu">
+            <li>
+                <img src="chat.svg" alt="">
+                <a href="index.html"><span>Chat Generator</span></a>
+            </li>
+            <li>
+                <img src="feedback.svg" alt="">
+                <a href="feedback.html"><span>Feedback</span></a>
+            </li>
+            <li>
+                <img src="library.svg" alt="">
+                <a href="prompt-library.html"><span>Prompt Library</span></a>
+            </li>
+             <li>
+                <img src="mysaves.svg" alt="">
+                <a href="my-saves.html"><span>My Saves</span></a>
+            </li>
+             <li>
+                <img src="favourites.svg" alt="">
+                <a href="favorite.html"><span>Favorite</span></a>
+            </li>
+            <li class="active">
+                <img src="history.svg" alt="">
+                <a href="history.html"><span>History</span></a>
+            </li>
+            <li>
+                <img src="statistics.svg" alt="">
+                <a href="statistics.html"><span>Statistics</span></a>
+            </li>
+            <span class="span"></span>
+            <li>
+                <img src="settings.svg" alt="">
+                <a href="settings.html"><span>Settings</span></a>
+            </li>
+            <li>
+                <img src="logout.svg" alt="">
+                <a href="logout.html"><span>Log Out</span></a>
+            </li>
+        </ul>
+    <div class="user-profile">
+      <p><strong>Adam Williams</strong></p>
+      <button class="upgrade-btn">Upgrade to Pro</button>
+    </div>
+  </div>
+
+  <!-- History Section -->
+  <div class="section-main history-section">
+    <div class="section-header">
+      <h1>📜 History</h1>
+      <p>Your complete conversation history</p>
+    </div>
+    
+    <div class="history-controls">
+      <div class="search-bar">
+        <input type="text" id="historySearch" placeholder="Search history...">
+        <button class="search-btn">🔍</button>
+      </div>
+      <div class="date-filter">
+        <select id="dateFilter">
+          <option value="all">All Time</option>
+          <option value="today">Today</option>
+          <option value="week">This Week</option>
+          <option value="month">This Month</option>
+          <option value="year">This Year</option>
+        </select>
+      </div>
+      <button class="clear-history-btn">🗑️ Clear History</button>
+    </div>
+    
+    <div class="history-timeline">
+      <div class="timeline-group">
+        <h3 class="timeline-date">Today - January 15, 2024</h3>
+        
+        <div class="history-item">
+          <div class="history-time">2:30 PM</div>
+          <div class="history-content">
+            <div class="history-header">
+              <h4>Programming Help Session</h4>
+              <div class="history-actions">
+                <button class="resume-btn">▶️</button>
+                <button class="save-btn">💾</button>
+                <button class="delete-btn">🗑️</button>
+              </div>
+            </div>
+            <p class="history-preview">Discussed React hooks, state management, and component optimization techniques...</p>
+            <div class="history-meta">
+              <span class="message-count">12 messages</span>
+              <span class="duration">45 minutes</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="history-item">
+          <div class="history-time">10:15 AM</div>
+          <div class="history-content">
+            <div class="history-header">
+              <h4>Recipe Recommendations</h4>
+              <div class="history-actions">
+                <button class="resume-btn">▶️</button>
+                <button class="save-btn">💾</button>
+                <button class="delete-btn">🗑️</button>
+              </div>
+            </div>
+            <p class="history-preview">Asked for healthy breakfast recipes and meal prep ideas for the week...</p>
+            <div class="history-meta">
+              <span class="message-count">8 messages</span>
+              <span class="duration">20 minutes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline-group">
+        <h3 class="timeline-date">Yesterday - January 14, 2024</h3>
+        
+        <div class="history-item">
+          <div class="history-time">6:45 PM</div>
+          <div class="history-content">
+            <div class="history-header">
+              <h4>Business Plan Review</h4>
+              <div class="history-actions">
+                <button class="resume-btn">▶️</button>
+                <button class="save-btn">💾</button>
+                <button class="delete-btn">🗑️</button>
+              </div>
+            </div>
+            <p class="history-preview">Reviewed startup business plan, discussed market analysis and financial projections...</p>
+            <div class="history-meta">
+              <span class="message-count">25 messages</span>
+              <span class="duration">1 hour 15 minutes</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="history-item">
+          <div class="history-time">3:20 PM</div>
+          <div class="history-content">
+            <div class="history-header">
+              <h4>Creative Writing</h4>
+              <div class="history-actions">
+                <button class="resume-btn">▶️</button>
+                <button class="save-btn">💾</button>
+                <button class="delete-btn">🗑️</button>
+              </div>
+            </div>
+            <p class="history-preview">Worked on a short story about time travel and its consequences...</p>
+            <div class="history-meta">
+              <span class="message-count">15 messages</span>
+              <span class="duration">35 minutes</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="history-item">
+          <div class="history-time">11:30 AM</div>
+          <div class="history-content">
+            <div class="history-header">
+              <h4>Study Help - Physics</h4>
+              <div class="history-actions">
+                <button class="resume-btn">▶️</button>
+                <button class="save-btn">💾</button>
+                <button class="delete-btn">🗑️</button>
+              </div>
+            </div>
+            <p class="history-preview">Explained quantum mechanics concepts and solved practice problems...</p>
+            <div class="history-meta">
+              <span class="message-count">18 messages</span>
+              <span class="duration">50 minutes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline-group">
+        <h3 class="timeline-date">January 13, 2024</h3>
+        
+        <div class="history-item">
+          <div class="history-time">4:15 PM</div>
+          <div class="history-content">
+            <div class="history-header">
+              <h4>Travel Planning</h4>
+              <div class="history-actions">
+                <button class="resume-btn">▶️</button>
+                <button class="save-btn">💾</button>
+                <button class="delete-btn">🗑️</button>
+              </div>
+            </div>
+            <p class="history-preview">Planned a 2-week European vacation including itinerary and budget...</p>
+            <div class="history-meta">
+              <span class="message-count">22 messages</span>
+              <span class="duration">1 hour</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="history-item">
+          <div class="history-time">1:00 PM</div>
+          <div class="history-content">
+            <div class="history-header">
+              <h4>Career Advice</h4>
+              <div class="history-actions">
+                <button class="resume-btn">▶️</button>
+                <button class="save-btn">💾</button>
+                <button class="delete-btn">🗑️</button>
+              </div>
+            </div>
+            <p class="history-preview">Discussed career transition from marketing to software development...</p>
+            <div class="history-meta">
+              <span class="message-count">16 messages</span>
+              <span class="duration">40 minutes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="load-more">
+      <button class="load-more-btn">Load More History</button>
+    </div>
+    
+    <div class="empty-state" style="display: none;">
+      <div class="empty-icon">📜</div>
+      <h3>No history found</h3>
+      <p>Your conversation history will appear here as you chat.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('historySearch');
+    const dateFilter = document.getElementById('dateFilter');
+    const historyItems = document.querySelectorAll('.history-item');
+    const timelineGroups = document.querySelectorAll('.timeline-group');
+    const clearHistoryBtn = document.querySelector('.clear-history-btn');
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+    
+    // Search functionality
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        filterHistory(searchTerm, dateFilter.value);
+    });
+    
+    // Date filter functionality
+    dateFilter.addEventListener('change', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        filterHistory(searchTerm, this.value);
+    });
+    
+    function filterHistory(searchTerm, dateFilter) {
+        let visibleCount = 0;
+        
+        timelineGroups.forEach(group => {
+            const groupDate = group.querySelector('.timeline-date').textContent;
+            const items = group.querySelectorAll('.history-item');
+            let groupHasVisible = false;
+            
+            items.forEach(item => {
+                const itemText = item.textContent.toLowerCase();
+                const matchesSearch = itemText.includes(searchTerm);
+                const matchesDate = checkDateFilter(groupDate, dateFilter);
+                
+                if (matchesSearch && matchesDate) {
+                    item.style.display = 'flex';
+                    groupHasVisible = true;
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Show/hide group based on whether it has visible items
+            if (groupHasVisible) {
+                group.style.display = 'block';
+            } else {
+                group.style.display = 'none';
+            }
+        });
+        
+        toggleEmptyState(visibleCount === 0);
+    }
+    
+    function checkDateFilter(groupDate, filter) {
+        const today = new Date();
+        const groupDateObj = new Date(groupDate.split(' - ')[1]);
+        
+        switch (filter) {
+            case 'today':
+                return groupDate.includes('Today');
+            case 'week':
+                const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+                return groupDateObj >= weekAgo;
+            case 'month':
+                const monthAgo = new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000);
+                return groupDateObj >= monthAgo;
+            case 'year':
+                return groupDateObj.getFullYear() === today.getFullYear();
+            default:
+                return true;
+        }
+    }
+    
+    // Resume conversation functionality
+    document.querySelectorAll('.resume-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const historyItem = this.closest('.history-item');
+            const title = historyItem.querySelector('h4').textContent;
+            
+            // Store the conversation to resume and redirect
+            localStorage.setItem('resumeConversation', title);
+            window.location.href = 'index.html';
+        });
+    });
+    
+    // Save conversation functionality
+    document.querySelectorAll('.save-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const historyItem = this.closest('.history-item');
+            const title = historyItem.querySelector('h4').textContent;
+            
+            this.textContent = '✅';
+            setTimeout(() => {
+                this.textContent = '💾';
+            }, 2000);
+            
+            // Add to saves (simulate)
+            console.log('Saved:', title);
+        });
+    });
+    
+    // Delete individual history item
+    document.querySelectorAll('.delete-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (confirm('Delete this conversation from history?')) {
+                const historyItem = this.closest('.history-item');
+                historyItem.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => {
+                    historyItem.remove();
+                    
+                    // Check if group is empty
+                    const group = historyItem.closest('.timeline-group');
+                    const remainingItems = group.querySelectorAll('.history-item');
+                    if (remainingItems.length === 0) {
+                        group.remove();
+                    }
+                    
+                    // Check if any history remains
+                    const allItems = document.querySelectorAll('.history-item');
+                    toggleEmptyState(allItems.length === 0);
+                }, 300);
+            }
+        });
+    });
+    
+    // Clear all history
+    clearHistoryBtn.addEventListener('click', function() {
+        if (confirm('Are you sure you want to clear all history? This action cannot be undone.')) {
+            const timeline = document.querySelector('.history-timeline');
+            timeline.style.animation = 'fadeOut 0.5s ease';
+            setTimeout(() => {
+                timeline.innerHTML = '';
+                toggleEmptyState(true);
+            }, 500);
+        }
+    });
+    
+    // Load more functionality
+    loadMoreBtn.addEventListener('click', function() {
+        this.textContent = 'Loading...';
+        this.disabled = true;
+        
+        // Simulate loading more history
+        setTimeout(() => {
+            this.textContent = 'Load More History';
+            this.disabled = false;
+            // In a real app, you would load more history items here
+        }, 1500);
+    });
+    
+    function toggleEmptyState(show) {
+        const emptyState = document.querySelector('.empty-state');
+        const timeline = document.querySelector('.history-timeline');
+        const loadMore = document.querySelector('.load-more');
+        
+        if (show) {
+            emptyState.style.display = 'block';
+            timeline.style.display = 'none';
+            loadMore.style.display = 'none';
+        } else {
+            emptyState.style.display = 'none';
+            timeline.style.display = 'block';
+            loadMore.style.display = 'block';
+        }
+    }
+});
+</script>
+
+</body>
+</html>

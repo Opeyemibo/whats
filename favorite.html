@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Favorites - ChatBot Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sections.css">
+    <script type="text/javascript" src="mode.js" defer></script>
+</head>
+<body>
+    
+<div class="container">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>CHAT BoT</h2>
+    <span class="span"></span>
+        <ul class="menu">
+            <li>
+                <img src="chat.svg" alt="">
+                <a href="index.html"><span>Chat Generator</span></a>
+            </li>
+            <li>
+                <img src="feedback.svg" alt="">
+                <a href="feedback.html"><span>Feedback</span></a>
+            </li>
+            <li>
+                <img src="library.svg" alt="">
+                <a href="prompt-library.html"><span>Prompt Library</span></a>
+            </li>
+             <li>
+                <img src="mysaves.svg" alt="">
+                <a href="my-saves.html"><span>My Saves</span></a>
+            </li>
+             <li class="active">
+                <img src="favourites.svg" alt="">
+                <a href="favorite.html"><span>Favorite</span></a>
+            </li>
+            <li>
+                <img src="history.svg" alt="">
+                <a href="history.html"><span>History</span></a>
+            </li>
+            <li>
+                <img src="statistics.svg" alt="">
+                <a href="statistics.html"><span>Statistics</span></a>
+            </li>
+            <span class="span"></span>
+            <li>
+                <img src="settings.svg" alt="">
+                <a href="settings.html"><span>Settings</span></a>
+            </li>
+            <li>
+                <img src="logout.svg" alt="">
+                <a href="logout.html"><span>Log Out</span></a>
+            </li>
+        </ul>
+    <div class="user-profile">
+      <p><strong>Adam Williams</strong></p>
+      <button class="upgrade-btn">Upgrade to Pro</button>
+    </div>
+  </div>
+
+  <!-- Favorites Section -->
+  <div class="section-main favorites-section">
+    <div class="section-header">
+      <h1>⭐ Favorites</h1>
+      <p>Your most loved conversations and responses</p>
+    </div>
+    
+    <div class="favorites-controls">
+      <div class="search-bar">
+        <input type="text" id="favoritesSearch" placeholder="Search favorites...">
+        <button class="search-btn">🔍</button>
+      </div>
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all">All</button>
+        <button class="tab-btn" data-filter="conversations">Conversations</button>
+        <button class="tab-btn" data-filter="responses">Responses</button>
+        <button class="tab-btn" data-filter="prompts">Prompts</button>
+      </div>
+    </div>
+    
+    <div class="favorites-grid">
+      <div class="favorite-item" data-type="conversations">
+        <div class="favorite-header">
+          <div class="favorite-icon">💬</div>
+          <div class="favorite-info">
+            <h3>AI Ethics Discussion</h3>
+            <span class="favorite-date">Added 2 days ago</span>
+          </div>
+          <div class="favorite-actions">
+            <button class="unfavorite-btn">💔</button>
+            <button class="share-btn">📤</button>
+          </div>
+        </div>
+        <p class="favorite-preview">Deep conversation about the ethical implications of artificial intelligence in modern society...</p>
+        <div class="favorite-meta">
+          <span class="favorite-type">Conversation</span>
+          <span class="favorite-rating">⭐⭐⭐⭐⭐</span>
+        </div>
+      </div>
+      
+      <div class="favorite-item" data-type="responses">
+        <div class="favorite-header">
+          <div class="favorite-icon">📝</div>
+          <div class="favorite-info">
+            <h3>JavaScript Best Practices</h3>
+            <span class="favorite-date">Added 3 days ago</span>
+          </div>
+          <div class="favorite-actions">
+            <button class="unfavorite-btn">💔</button>
+            <button class="share-btn">📤</button>
+          </div>
+        </div>
+        <p class="favorite-preview">Comprehensive guide to modern JavaScript development practices including ES6+ features...</p>
+        <div class="favorite-meta">
+          <span class="favorite-type">Response</span>
+          <span class="favorite-rating">⭐⭐⭐⭐⭐</span>
+        </div>
+      </div>
+      
+      <div class="favorite-item" data-type="prompts">
+        <div class="favorite-header">
+          <div class="favorite-icon">🎯</div>
+          <div class="favorite-info">
+            <h3>Creative Story Starter</h3>
+            <span class="favorite-date">Added 5 days ago</span>
+          </div>
+          <div class="favorite-actions">
+            <button class="unfavorite-btn">💔</button>
+            <button class="share-btn">📤</button>
+          </div>
+        </div>
+        <p class="favorite-preview">Write a story about a librarian who discovers that books in their library come to life at midnight...</p>
+        <div class="favorite-meta">
+          <span class="favorite-type">Prompt</span>
+          <span class="favorite-rating">⭐⭐⭐⭐</span>
+        </div>
+      </div>
+      
+      <div class="favorite-item" data-type="conversations">
+        <div class="favorite-header">
+          <div class="favorite-icon">💬</div>
+          <div class="favorite-info">
+            <h3>Cooking Tips & Recipes</h3>
+            <span class="favorite-date">Added 1 week ago</span>
+          </div>
+          <div class="favorite-actions">
+            <button class="unfavorite-btn">💔</button>
+            <button class="share-btn">📤</button>
+          </div>
+        </div>
+        <p class="favorite-preview">Collection of healthy recipes and cooking techniques for busy professionals...</p>
+        <div class="favorite-meta">
+          <span class="favorite-type">Conversation</span>
+          <span class="favorite-rating">⭐⭐⭐⭐⭐</span>
+        </div>
+      </div>
+      
+      <div class="favorite-item" data-type="responses">
+        <div class="favorite-header">
+          <div class="favorite-icon">📝</div>
+          <div class="favorite-info">
+            <h3>Investment Strategy Guide</h3>
+            <span class="favorite-date">Added 1 week ago</span>
+          </div>
+          <div class="favorite-actions">
+            <button class="unfavorite-btn">💔</button>
+            <button class="share-btn">📤</button>
+          </div>
+        </div>
+        <p class="favorite-preview">Beginner-friendly guide to building a diversified investment portfolio...</p>
+        <div class="favorite-meta">
+          <span class="favorite-type">Response</span>
+          <span class="favorite-rating">⭐⭐⭐⭐</span>
+        </div>
+      </div>
+      
+      <div class="favorite-item" data-type="prompts">
+        <div class="favorite-header">
+          <div class="favorite-icon">🎯</div>
+          <div class="favorite-info">
+            <h3>Business Pitch Template</h3>
+            <span class="favorite-date">Added 2 weeks ago</span>
+          </div>
+          <div class="favorite-actions">
+            <button class="unfavorite-btn">💔</button>
+            <button class="share-btn">📤</button>
+          </div>
+        </div>
+        <p class="favorite-preview">Create a compelling 5-minute pitch for a sustainable technology startup...</p>
+        <div class="favorite-meta">
+          <span class="favorite-type">Prompt</span>
+          <span class="favorite-rating">⭐⭐⭐⭐⭐</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="empty-state" style="display: none;">
+      <div class="empty-icon">⭐</div>
+      <h3>No favorites yet</h3>
+      <p>Start favoriting conversations and responses to see them here.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('favoritesSearch');
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const favoriteItems = document.querySelectorAll('.favorite-item');
+    const favoritesGrid = document.querySelector('.favorites-grid');
+    
+    let currentFilter = 'all';
+    
+    // Search functionality
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        filterItems(searchTerm, currentFilter);
+    });
+    
+    // Tab filtering
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Update active tab
+            tabButtons.forEach(tab => tab.classList.remove('active'));
+            this.classList.add('active');
+            
+            currentFilter = this.dataset.filter;
+            const searchTerm = searchInput.value.toLowerCase();
+            filterItems(searchTerm, currentFilter);
+        });
+    });
+    
+    function filterItems(searchTerm, filter) {
+        let visibleCount = 0;
+        
+        favoriteItems.forEach(item => {
+            const itemText = item.textContent.toLowerCase();
+            const itemType = item.dataset.type;
+            
+            const matchesSearch = itemText.includes(searchTerm);
+            const matchesFilter = filter === 'all' || itemType === filter;
+            
+            if (matchesSearch && matchesFilter) {
+                item.style.display = 'block';
+                visibleCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+        
+        toggleEmptyState(visibleCount === 0);
+    }
+    
+    // Unfavorite functionality
+    document.querySelectorAll('.unfavorite-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (confirm('Remove from favorites?')) {
+                const favoriteItem = this.closest('.favorite-item');
+                favoriteItem.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => {
+                    favoriteItem.remove();
+                    const remainingItems = document.querySelectorAll('.favorite-item').length;
+                    toggleEmptyState(remainingItems === 0);
+                }, 300);
+            }
+        });
+    });
+    
+    // Share functionality
+    document.querySelectorAll('.share-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const favoriteItem = this.closest('.favorite-item');
+            const title = favoriteItem.querySelector('h3').textContent;
+            const preview = favoriteItem.querySelector('.favorite-preview').textContent;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: preview,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback - copy to clipboard
+                const shareText = `${title}\n\n${preview}`;
+                navigator.clipboard.writeText(shareText).then(() => {
+                    alert('Copied to clipboard!');
+                });
+            }
+        });
+    });
+    
+    // Click to view full content
+    favoriteItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            if (!e.target.closest('.favorite-actions')) {
+                const title = this.querySelector('h3').textContent;
+                const preview = this.querySelector('.favorite-preview').textContent;
+                
+                // Create modal or navigate to full view
+                alert(`${title}\n\n${preview}`);
+            }
+        });
+    });
+    
+    function toggleEmptyState(show) {
+        const emptyState = document.querySelector('.empty-state');
+        if (show) {
+            emptyState.style.display = 'block';
+            favoritesGrid.style.display = 'none';
+        } else {
+            emptyState.style.display = 'none';
+            favoritesGrid.style.display = 'grid';
+        }
+    }
+});
+</script>
+
+</body>
+</html>
